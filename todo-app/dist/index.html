@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOリスト</title>
+</head>
+
+<body>
+    <div>
+        <h1>TODOリスト</h1>
+        <div>
+            <label for="task-name">タスク名</label>
+            <input type="text" id="task-name">
+
+            <label for="task-name">タスク詳細</label>
+            <input type="text" id="task-detail">
+
+            <button id="create-task-btn">登録</button>
+        </div>
+    </div>
+    <br>
+    <!-- <table> -->
+    <table id="table">
+        <thead>
+            <tr>
+                <th class="min-area">No</th>
+                <th>タスク名</th>
+                <th>タスク詳細</th>
+                <th class="min-area"></th>
+            </tr>
+        </thead>
+        <tbody id="task-list">
+        </tbody>
+    </table>
+    <!-- XSSサンプル -->
+    <!-- <div>1億円プレゼント！応募する？</div><a href="https://www.google.com/" style="color: #fff;background: #5876a3;padding: 10px 30px;display: inline-block;border-radius: 5px;text-decoration: none;">はい</a><a href="https://www.google.com/" style="color: #fff;background: #767e8b;padding: 10px 30px;display: inline-block;border-radius: 5px;text-decoration: none;">いいえ</a> -->
+    <!-- <script type="text/javascript">document.getElementById("table").onclick = function () { alert("XSS") }</script> -->
+
+    <!-- webpackでバンドルされたファイルを読み込み -->
+    <script src="./bundle.js"></script>
+</body>
+
+</html>
+
+<style>
+    table,
+    td,
+    th {
+        border: 1px solid #333;
+    }
+
+    td {
+        background-color: #ddd;
+    }
+
+    th {
+        width: 200px;
+    }
+
+    .min-area {
+        width: 45px;
+    }
+
+    thead {
+        background-color: #333;
+        color: #fff;
+    }
+</style>
